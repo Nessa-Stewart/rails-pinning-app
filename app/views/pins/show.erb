@@ -6,6 +6,9 @@
 </div>
 
 <div class="show-pin">
+  <div class="pic">
+    <img src="<%= @pin.image.url(:medium) %>">
+  </div>
   <p><%= "#{@pin.text}" %></p>
 
   <hr/>
