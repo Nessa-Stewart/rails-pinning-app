@@ -19,7 +19,7 @@ class PinsController < ApplicationController
   end
   
   def create
-    @pin =Pin.create(pin_params)
+    @pin = Pin.create(pin_params)
 	
 	if @pin.valid?
 	  @pin.save
@@ -37,7 +37,7 @@ end
   def update
     @pin = Pin.find(params[:id])
 	
-	if @pin.update(pin_params)
+	if @pin.update_attributes!(pin_params)
 	  redirect_to @pin
 	else
 	  @errors = @pin.errors
