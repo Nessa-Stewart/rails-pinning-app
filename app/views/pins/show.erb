@@ -7,8 +7,8 @@
 
 <div class="show-pin">
   <div class="pic">
-  <% if @pin.image_file_name.nil? == false %>
-    <img src="<%= @pin.image.url(:medium) %>">
+  <% if @pin.image.url.nil? == false %>
+    <%= image_tag @pin.image.url(:medium) %>
 	<% end %>
   </div>
   <p><%= "#{@pin.text}" %></p>
